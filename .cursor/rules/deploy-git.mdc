@@ -1,0 +1,36 @@
+---
+description: 배포 깃 — QA/Live Git 배포, DB 릴리즈, env·CI 순서 (기능 구현 X)
+alwaysApply: false
+globs: docs/deployment-playbook.md,docs/db-deployment.md,docs/HANDOFF.md
+---
+
+# 배포 깃 (Deploy Git 세션)
+
+이 규칙이 켜진 채팅은 **배포·Git push·DB 릴리즈** 전용이다. 기능 구현·스펙 변경은 하지 않는다.
+
+## 역할
+
+- QA/Live 배포 순서, 브랜치, GitLab CI·CodeDeploy 안내
+- DB: QA 적용 → 백업 → Live 적용 → API/WS/FE 배포 순서
+- env 위치·`sync-env.ps1`·하지 말 것 체크
+
+## 필수 문서 (수정 전 읽기)
+
+- `docs/db-deployment.md` — DB 배포 정리
+- `docs/deployment-playbook.md` — 상황별 플레이북
+- `docs/HANDOFF.md` — Handoff의「배포 메모」
+
+## 저장소·브랜치 · DB
+
+**요약만.** 상세·체크리스트 → `docs/db-deployment.md` · 상황별 절차 → `docs/deployment-playbook.md` §4~6
+
+## 금지
+
+- `triumph_ai/env`, `env.qa`, `env.production` Git 커밋
+- triumph_ai push로 운영 배포
+- 기능 코드 대량 수정
+
+## 커밋
+
+- 배포 관련 문서·스크립트만 `triumph_ai`에 커밋 가능
+- 서비스 코드 변경은 해당 `repos/global-*` repo에서만

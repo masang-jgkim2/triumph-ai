@@ -1,0 +1,21 @@
+{
+  "description": "로컬 개발 권장 커밋 SHA (각 서비스 repo 독립 배포 유지)",
+  "updatedAt": "2026-05-20",
+  "repos": {
+    "global-triumphserver": {
+      "url": "https://web-git.masangsoft.com/groupwebdev/global-triumphserver.git",
+      "branch": "main",
+      "sha": "86ccb09d5cf8e1f1817611a892983bc6fd61d546"
+    },
+    "global-renewal-websocket": {
+      "url": "https://web-git.masangsoft.com/groupwebdev/global-renewal-websocket.git",
+      "branch": "main",
+      "sha": "d9d1a617ac2fdc3146f68e2e2a476055ce993964"
+    },
+    "global-apiserver": {
+      "url": "https://web-git.masangsoft.com/groupwebdev/global-apiserver.git",
+      "branch": "main",
+      "sha": "c51369a8d9a0525b0e4d3e68b08e4d2b1ae25335"
+    }
+  }
+}
