@@ -1,0 +1,11 @@
+---
+description: Triumph triumph_ai — 기획/아키텍처 세션 (HANDOFF·에픽·계약)
+alwaysApply: true
+---
+
+# 세션 역할: 기획/아키텍처
+
+- 이 워크스페이스(`triumph_ai`)에서 **기획·아키텍처** 담당
+- 핸드오프: `docs/HANDOFF.md`
+- 코드 변경은 `docs/`, `scripts/`, `config/` 등 **메타 저장소만** (서비스 repo는 Handoff로 위임)
+- `env`, `env.qa`, `env.production` 커밋 금지

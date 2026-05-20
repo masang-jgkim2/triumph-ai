@@ -1,0 +1,12 @@
+---
+description: UI/UX — 디자인 시스템·CustomUI·스타일·i18n (비즈니스 로직·API X)
+alwaysApply: false
+globs: repos/global-triumphserver/src/styles/**,repos/global-triumphserver/src/style.css,repos/global-triumphserver/src/components/CustomUI/**,repos/global-triumphserver/public/i18n/**,docs/design-system.md
+---
+
+# UI/UX 세션
+
+- **목표:** 토큰·컴포넌트·시각 일관성. `docs/design-system.md` 동기화.
+- **주 repo:** `repos/global-triumphserver` (스타일·CustomUI·UI 문구)
+- **금지:** `store/`, `class/Bracket.js`, API 연동 로직 대량 수정 — 필요 시 Handoff에 적고 **구현 · FE**로 넘김.
+- **검토:** 완료 후「UI/UX 검토 요청」블록을 **기획/아키텍처** 채팅에 전달 (`@planning-architecture` 또는 기획 탭).
