@@ -146,7 +146,20 @@
 
 ---
 
-## 7. 검토 이력
+## 7. E3 더블 엘리미네이션 (브라켓 UI)
+
+| 요소 | 스펙 |
+|------|------|
+| 구역 탭 | 승자조 / 패자조 / 그랜드 파이널 (`color="triumph"` active) |
+| 라운드 칩 | `group_title` 있으면 DB 제목, 없으면 `round_of` / `finals` |
+| 이벤트 생성 | `format=1` 시 info alert, 인원 4~128, 3/4위 OFF |
+| 토큰 | 기존 `triumph`, `tp-*` 유지 (신규 hex 최소) |
+
+상세: [handoffs/E3-double-elimination.md](./handoffs/E3-double-elimination.md)
+
+---
+
+## 8. 검토 이력
 
 | 날짜 | 검토자 | 결과 | 메모 |
 |------|--------|------|------|

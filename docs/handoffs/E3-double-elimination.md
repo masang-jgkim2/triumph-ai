@@ -1,6 +1,6 @@
 # Handoff: E3 더블 엘리미네이션
 
-**상태:** draft (기획·BE 착수 전)  
+**상태:** in_progress (UI/UX·FE 착수 — QA DB 반영 완료)  
 **기획 확정일:** —  
 **format:** `events.format = 1`  
 **DB 참고:** [repos/db/README.md](../../repos/db/README.md)

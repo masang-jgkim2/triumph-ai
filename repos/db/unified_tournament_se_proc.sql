@@ -785,16 +785,21 @@ BEGIN
 
     -- ── 통합 스키마 개선(실행) ────────────────────────────────────
     -- 조인: brackets.group_id = bracket_groups.group_id, 이벤트는 bg.event_id
-    -- 레거시와 동일한 결과 컬럼 세트 유지
+    -- 레거시와 동일한 결과 컬럼 세트 + bracket_type/group_title/라우팅 ID
     -- SE만 노출: 해당 이벤트에 SE 매치(bracket)가 있을 때. 없으면 전 타입 노출.
     SELECT
         br.bracket_id,
         bg.event_id,
+        br.group_id,
+        bg.bracket_type,
+        bg.title AS group_title,
         bg.depth,
         br.`order`,
         br.match_point,
         br.start_dt,
         br.winner_entrant_id,
+        br.next_winner_bracket_id,
+        br.next_loser_bracket_id,
         br.status,
         en.score,
         en.participant_id,
