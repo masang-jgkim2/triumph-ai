@@ -37,12 +37,15 @@ UI/UX 작업 검토해줘.
 (검토 요청 블록)
 ```
 
-### 구현 (FE / BE)
+### 구현 (FE / BE / UI·UX)
 
-1. 기획 Handoff(`docs/handoffs/*.md`)에 API·DB·화면 범위 확정  
-2. BE: `@be-dev` + Handoff — API/SP/WS 먼저 (FE가 의존할 때)  
-3. FE: `@fe-dev` + Handoff + `docs/design-system.md` — 연동·화면  
-4. 완료 보고 블록을 기획 탭 또는 QA에 전달 (각 에이전트 파일 하단 템플릿)
+1. 기획 Handoff(`docs/handoffs/*.md`)에 API·DB·화면 범위 확정 — **기획 탭은 문서만**  
+2. UI/UX: `@ui-ux` → 스펙·`design-system.md`  
+3. BE: `@be-dev` — API/SP/WS (FE가 의존할 때 선행)  
+4. FE: `@fe-dev` — 연동·화면  
+5. **배포:** 검토·MR 후 **배포 깃** 세션 (`deploy-git` 규칙) — QA/Live push, 기능 코드 X  
+
+**금지:** 기획/아키텍처 탭에서 `repos/global-*` 코드 커밋
 
 ## 문서 (링크만)
 

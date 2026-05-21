@@ -1,9 +1,24 @@
 # Handoff: E3 더블 엘리미네이션
 
-**상태:** in_progress (UI/UX·FE 착수 — QA DB 반영 완료)  
+**상태:** review (역할 외 선구현 커밋 → 담당 에이전트 검토·재진행)  
 **기획 확정일:** —  
 **format:** `events.format = 1`  
 **DB 참고:** [repos/db/README.md](../../repos/db/README.md)
+
+> **역할 원칙:** 기획/아키텍처는 **본 문서·계약만** 수정. FE/BE/UI/UX 구현·커밋은 각 `@에이전트`. **QA/Live 배포·MR 머지**는 **배포 깃** 세션.
+
+---
+
+## ⚠️ 선구현 커밋 (기획 탭에서 잘못 넣음 — 검토 필수)
+
+| repo | 브랜치 | 커밋 | 담당 검토 | 내용 |
+|------|--------|------|-----------|------|
+| `global-triumphserver` | `Double-Elimination` | `5479464` | **@ui-ux** → **@fe-dev** | DE 탭·i18n·`BracketContainer`·이벤트 생성 hint |
+| `global-apiserver` | `Double-Elimination` | `ce1070c` | **@be-dev** | bracket list API 필드 추가 |
+| `triumph_ai` | `Double-Elimination` | `8a67672` | **@be-dev** (SP) · 기획 | `unified_tournament_se_proc.sql` SELECT 확장 |
+
+**지시:** 각 담당 에이전트가 diff 검토 후 **채택(amend/이어서)** 또는 **되돌리고 Handoff 기준 재구현**.  
+**배포 깃:** 위 검토·MR 승인 **이후에만** QA 배포 (기능 구현·재커밋 X).
 
 ---
 
@@ -95,7 +110,7 @@
 | **검증** |
 | 10 | BE 완료 보고 (SP·API·FE 연동 메모) | |
 
-**현재 갭:** 코드는 레거시 `sp_bracket_single_insert` only — **통합 SP 미연동**
+**현재 갭:** `sp_bracket_de_*` API 연동·WS — **본격 구현은 @be-dev 재진행**. list API 필드만 선반영(`ce1070c`).
 
 **하지 말 것:** triumphserver UI, `env*` 커밋
 
@@ -169,3 +184,59 @@
 
 - repo + branch: API `qa`, WS `release/*`, FE `qa`
 - DB 먼저: **Y** — `repos/db` 순서 준수
+- **선행:** UI/UX·FE·BE 검토 완료 + `Double-Elimination` → 대상 브랜치 MR 머지
+- **배포 깃이 할 일:** MR/머지·QA push·스모크·Live 체크리스트 (`deployment-playbook.md`) — **코드 작성 X**
+
+---
+
+## 담당 에이전트에 붙여넣기 (검토·재진행)
+
+### UI/UX (`@ui-ux`)
+
+```text
+@docs/handoffs/E3-double-elimination.md @docs/design-system.md
+E3 더블 엘리미네이션 UI 검토 요청.
+
+선구현 커밋 global-triumphserver Double-Elimination 5479464 를 검토해줘.
+- EventCreateCompetitionInfo hint, i18n de_zone_*, design-system §7과 Handoff 일치 여부
+- 불일치·누락(MakeBracketDialog, Manage 화면) 정리 후 design-system.md 갱신
+- FE(@fe-dev)에 넘길 UI 스펙만 문서로 — 직접 store/Bracket.js 수정은 최소
+검토 결과: 채택 / 수정요청 / 폐기 재작성
+```
+
+### FE (`@fe-dev`)
+
+```text
+@docs/handoffs/E3-double-elimination.md @docs/page-inventory.md
+E3 FE 검토·재진행.
+
+선구현 5479464 (BracketContainer, bracketDisplay.js, EventCreateCompetitionInfo) 검토.
+- UI/UX 스펙 반영 여부, format=0 회귀, BE API 필드(bracket_type 등) 소비
+- 미완: MakeBracketDialog, 판정/리셋, Bracket.js — Handoff 기준 이어서 구현
+- global-triumphserver Double-Elimination 브랜치에만 커밋
+완료 시「FE 구현 완료 보고」블록으로 기획 탭에 전달
+```
+
+### BE (`@be-dev`)
+
+```text
+@docs/handoffs/E3-double-elimination.md @repos/db/README.md
+E3 BE 검토·재진행.
+
+1) 선구현 ce1070c (BracketController 응답 필드) + QA SP sp_bracket_entries_groups_participants_select 갱신 여부 확인
+2) Handoff §DE SP 전부 API 연동: sp_bracket_de_insert, entries_insert, adjudge, reset …
+3) format=1 분기, WS bracket 모듈
+- apiserver/websocket Double-Elimination 브랜치
+완료 시「BE 구현 완료 보고」→ FE·기획
+```
+
+### 배포 깃 (`deploy-git` 규칙 — 기능 구현 X)
+
+```text
+@docs/handoffs/E3-double-elimination.md @docs/deployment-playbook.md @docs/db-deployment.md
+E3 더블 엘리미네이션 QA 배포 (검토 완료 후).
+
+선행: UI/UX·FE·BE 검토 통과, Double-Elimination MR 머지 준비
+할 일: QA DB SP 재적용 필요 시 확인 → API qa → WS release/* → FE qa push 순서, 스모크 체크리스트
+코드 기능 구현은 하지 말 것.
+```
