@@ -9,8 +9,8 @@
 |---------|-----------|-------------|
 | **기획/아키텍처** | `planning-architecture` | `triumph-planning.mdc` |
 | **UI/UX** | `ui-ux` | `triumph-ui-ux.mdc` |
-| **구현 · FE** | *(미정의 — 추후 `fe-dev`)* | — |
-| **구현 · BE** | *(미정의 — 추후 `be-dev`)* | — |
+| **구현 · FE** | `fe-dev` | `triumph-fe-dev.mdc` |
+| **구현 · BE** | `be-dev` | `triumph-be-dev.mdc` |
 | **배포 깃** | *(미정의)* | `deploy-git.mdc` |
 
 탭 Rename: 채팅 탭 우클릭 → Rename (자동 변경 불가).
@@ -21,6 +21,8 @@
 |---------|------------|
 | 기획/아키텍처 | `planning-architecture` |
 | UI/UX | `ui-ux` |
+| 구현 · FE | `fe-dev` |
+| 구현 · BE | `be-dev` |
 | 배포 깃 | playbook/db-deployment 파일 @ 멘션 + `deploy-git` 규칙 |
 
 ### UI/UX → 기획 검토
@@ -34,6 +36,13 @@
 UI/UX 작업 검토해줘.
 (검토 요청 블록)
 ```
+
+### 구현 (FE / BE)
+
+1. 기획 Handoff(`docs/handoffs/*.md`)에 API·DB·화면 범위 확정  
+2. BE: `@be-dev` + Handoff — API/SP/WS 먼저 (FE가 의존할 때)  
+3. FE: `@fe-dev` + Handoff + `docs/design-system.md` — 연동·화면  
+4. 완료 보고 블록을 기획 탭 또는 QA에 전달 (각 에이전트 파일 하단 템플릿)
 
 ## 문서 (링크만)
 
@@ -51,6 +60,10 @@ UI/UX 작업 검토해줘.
 |------|------|
 | `agents/planning-architecture.md` | 기획 세션 프롬프트 |
 | `agents/ui-ux.md` | UI/UX 세션 프롬프트 |
+| `agents/fe-dev.md` | 구현 · FE 세션 프롬프트 |
+| `agents/be-dev.md` | 구현 · BE 세션 프롬프트 (DB 포함) |
 | `rules/triumph-planning.mdc` | 기획 alwaysApply |
 | `rules/triumph-ui-ux.mdc` | UI/UX globs |
+| `rules/triumph-fe-dev.mdc` | FE globs (`global-triumphserver`) |
+| `rules/triumph-be-dev.mdc` | BE globs (apiserver·websocket) |
 | `rules/deploy-git.mdc` | 배포 깃 (playbook/db 문서 열 때) |

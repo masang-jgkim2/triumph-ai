@@ -4,7 +4,7 @@
 
 | 문서 | 단일 진실 (이 내용은 이 파일만) |
 |------|-------------------------------|
-| [AGENTS.md](../AGENTS.md) | Cursor 탭 이름, `@planning-architecture` / `@ui-ux`, 새 채팅 방법 |
+| [AGENTS.md](../AGENTS.md) | Cursor 탭 이름, `@planning-architecture` / `@ui-ux` / `@fe-dev` / `@be-dev`, 새 채팅 방법 |
 | [HANDOFF.md](./HANDOFF.md) | 역할·워크플로·Handoff **템플릿**·에픽 E0~E5·하지 말 것 |
 | [handoffs/*.md](./handoffs/) | 에픽 **인스턴스** (E2 등) — 템플릿 복사본 |
 | [design-system.md](./design-system.md) | UI/UX **산출물** (토큰·컴포넌트 표) |
@@ -27,6 +27,8 @@
 |---------|-------------|-----------|
 | 기획/아키텍처 | `planning-architecture` | `triumph-planning.mdc` (alwaysApply) |
 | UI/UX | `ui-ux` | `triumph-ui-ux.mdc` (globs) |
+| 구현 · FE | `fe-dev` | `triumph-fe-dev.mdc` (globs) |
+| 구현 · BE | `be-dev` | `triumph-be-dev.mdc` (globs, DB 포함) |
 | 배포 깃 | (에이전트 파일 없음) | `deploy-git.mdc` (playbook 열 때) |
 
 `HANDOFF.md` ≠ `handoffs/E2-*.md` — 전자는 규칙·템플릿, 후자는 작업 티켓.

@@ -1,0 +1,13 @@
+---
+description: 구현 · BE — Laravel API·WebSocket·DB/SP (apiserver·websocket)
+alwaysApply: false
+globs: repos/global-apiserver/**,repos/global-renewal-websocket/**,docs/db-deployment.md,docs/service-map.md
+---
+
+# 구현 · BE 세션
+
+- **목표:** Handoff API·DB·WS 구현. DB는 BE 담당(계약은 **기획/아키텍처**).
+- **주 repo:** `repos/global-apiserver`, `repos/global-renewal-websocket`
+- **금지:** `global-triumphserver` UI·스타일 대량 수정 — **구현 · FE** (`@fe-dev`).
+- **금지:** `triumph_ai/env*` 커밋. Live DB·push는 **배포 깃** (`deploy-git.mdc`).
+- **로컬:** PHP 8.2, `docs/local-dev.md`. 각 서비스 repo는 **별도 Git**.

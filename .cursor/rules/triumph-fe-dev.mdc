@@ -1,0 +1,13 @@
+---
+description: 구현 · FE — Vue·Pinia·API/Socket 연동 (global-triumphserver)
+alwaysApply: false
+globs: repos/global-triumphserver/src/**,repos/global-triumphserver/vite.config.js,docs/page-inventory.md,docs/handoffs/**
+---
+
+# 구현 · FE 세션
+
+- **목표:** Handoff 범위 기능·연동. `docs/page-inventory.md`·`docs/design-system.md` 준수.
+- **주 repo:** `repos/global-triumphserver` only
+- **금지:** `global-apiserver` / `global-renewal-websocket` 수정 — API·SP·WS는 **구현 · BE** (`@be-dev`).
+- **금지:** `env`, `env.qa`, `env.production` 커밋. 전역 리스킨은 **UI/UX** Handoff 범위만.
+- **스타일:** 헝가리안, 한글 주석, 기존 store·axios·CustomUI 패턴 재사용.
