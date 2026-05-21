@@ -26,6 +26,7 @@ description: Triumph 기획/아키텍처 — 에픽·API·DB 계약·HANDOFF 작
 - `AGENTS.md` — 탭·@에이전트 ID
 - `docs/HANDOFF.md` — 워크플로·핸드오프 템플릿·에픽
 - `docs/service-map.md` — 연동 (배포 상세는 playbook, 직접 push X)
+- `repos/db/README.md` — 통합 스키마·SE/DE SP 참고 (E3 Handoff·API 계약 작성 시)
 
 ## 응답 원칙
 

@@ -50,6 +50,7 @@ UI/UX 작업 검토해줘.
 |------|------|
 | Handoff·에픽 | [HANDOFF.md](docs/HANDOFF.md) |
 | UI 산출물 · E2 Handoff | [design-system.md](docs/design-system.md) · [handoffs/E2-design-system.md](docs/handoffs/E2-design-system.md) |
+| E3 더블 엘리미네이션 | [handoffs/E3-double-elimination.md](docs/handoffs/E3-double-elimination.md) · [repos/db/README.md](repos/db/README.md) |
 | 연동·포트 | [service-map.md](docs/service-map.md) |
 | 로컬 기동 | [local-dev.md](docs/local-dev.md) |
 | 배포 | [deployment-playbook.md](docs/deployment-playbook.md) · [db-deployment.md](docs/db-deployment.md) |

@@ -30,6 +30,7 @@ description: Triumph 구현 · BE — Laravel API, WebSocket(Prisma), MySQL SP·
 - `docs/HANDOFF.md` — API·DB 계약·에픽
 - `docs/service-map.md` — 포트·env 변수·아키텍처
 - `docs/db-deployment.md` — QA→Live DB, CI 한계
+- **`repos/db/README.md`** — QA 스키마 스냅샷, `unified_tournament_*` DDL·SE/DE SP (E3 더블)
 - `docs/local-dev.md` — PHP 8.2, composer, prisma generate
 - `repos/global-apiserver` / `global-renewal-websocket` 각자 **Git** (triumph_ai와 분리)
 

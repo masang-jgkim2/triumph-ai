@@ -143,7 +143,7 @@ UI/UX 검토 예시: [handoffs/E2-design-system.md](./handoffs/E2-design-system.
 | E0 | 스펙·API 계약 | — | 검토 | 검토 | — |
 | E1 | 싱글 엘리미네이션 안정화 | 최소 | SP/버그 | 브라켓·판정 | QA 회귀 |
 | E2 | 디자인 시스템 (기능 화면) | **ready** — [E2-design-system.md](./handoffs/E2-design-system.md) | — | P0 적용 | FE만 |
-| E3 | 더블 엘리미네이션 | 브라켓·생성 UI | SP·API·WS | Tournament/DE | DB→API→WS→FE |
+| E3 | 더블 엘리미네이션 | [E3 Handoff](./handoffs/E3-double-elimination.md) | `repos/db` + API·WS | Tournament/DE | DB→API→WS→FE |
 | E4 | 포인트제 | 순위·대진 UI | SP·API | 신규 뷰 | 규칙 확정 후 |
 | E5 | DS 전역 적용 | 전체 | — | 리스킨 | FE, 기능 안정 후 |
 
@@ -157,6 +157,7 @@ UI/UX 검토 예시: [handoffs/E2-design-system.md](./handoffs/E2-design-system.
 | [service-map.md](./service-map.md) | API·WS·FE 연동 |
 | [deployment-playbook.md](./deployment-playbook.md) | 상황별 배포 |
 | [db-deployment.md](./db-deployment.md) | DB QA→Live, CI 한계, 체크리스트 |
+| [db/README.md](./db/README.md) · [repos/db/README.md](../repos/db/README.md) | QA 스키마·통합 SE/DE SQL (E3 참고) |
 
 ```powershell
 cd D:\masang\project\triumph_ai

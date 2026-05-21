@@ -45,6 +45,7 @@ stop-all.bat
 ## 문서
 
 - **[AGENTS.md](AGENTS.md)** — Cursor 세션·@에이전트 (진입점)
+- **[repos/db/](repos/db/)** — QA 스키마·통합 SE/DE SQL (DB·E3 참고)
 - **[docs/README.md](docs/README.md)** — 문서 맵·중복 방지
 - [HANDOFF.md](docs/HANDOFF.md) · [local-dev.md](docs/local-dev.md) · [service-map.md](docs/service-map.md)
 - [deployment-playbook.md](docs/deployment-playbook.md) · [db-deployment.md](docs/db-deployment.md)

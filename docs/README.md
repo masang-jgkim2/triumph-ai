@@ -6,13 +6,14 @@
 |------|-------------------------------|
 | [AGENTS.md](../AGENTS.md) | Cursor 탭 이름, `@planning-architecture` / `@ui-ux` / `@fe-dev` / `@be-dev`, 새 채팅 방법 |
 | [HANDOFF.md](./HANDOFF.md) | 역할·워크플로·Handoff **템플릿**·에픽 E0~E5·하지 말 것 |
-| [handoffs/*.md](./handoffs/) | 에픽 **인스턴스** (E2 등) — 템플릿 복사본 |
+| [handoffs/*.md](./handoffs/) | 에픽 **인스턴스** (E2, E3 등) — 템플릿 복사본 |
 | [design-system.md](./design-system.md) | UI/UX **산출물** (토큰·컴포넌트 표) |
 | [page-inventory.md](./page-inventory.md) | FE 라우트·P0/P1/P2 인벤토리 |
 | [service-map.md](./service-map.md) | 아키텍처·포트·`VITE_*`·WS health |
 | [local-dev.md](./local-dev.md) | clone, install, start/stop, 트러블슈팅 |
 | [deployment-playbook.md](./deployment-playbook.md) | 상황별 배포 (디자인/FE/BE/DB/Live) |
 | [db-deployment.md](./db-deployment.md) | DB QA→Live, CI 한계, 체크리스트 |
+| [db/README.md](./db/README.md) | → `repos/db/` SQL·스키마 참고 (SE/DE, E3) |
 
 ## `.cursor` 와 docs 관계
 

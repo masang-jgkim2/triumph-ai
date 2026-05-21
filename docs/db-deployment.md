@@ -6,6 +6,21 @@
 
 ---
 
+## 0. 참고 SQL (`repos/db`)
+
+통합 토너먼트(SE/DE) DDL·SP·QA 스키마 스냅샷은 메타 repo에 둡니다.
+
+| 경로 | 용도 |
+|------|------|
+| [repos/db/README.md](../repos/db/README.md) | 파일 설명·적용 순서 |
+| `triumph_schema_qa_*.sql` | QA 구조 기준선 |
+| `unified_tournament_table_migration.sql` | 레거시 → 통합 ALTER |
+| `unified_tournament_se_proc.sql` / `unified_tournament_de_proc.sql` | SE / DE SP |
+
+E3 더블 엘리미네이션: **DDL → `unified_tournament_de_proc.sql` → API·WS·FE** 순으로 Handoff와 맞출 것.
+
+---
+
 ## 1. 한눈에
 
 | 서비스 | DB 연결 | 스키마 관리 | CI에서 DB 적용 |
