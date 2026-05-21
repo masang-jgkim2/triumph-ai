@@ -151,9 +151,14 @@
 | 요소 | 스펙 |
 |------|------|
 | 구역 탭 | 승자조 / 패자조 / 그랜드 파이널 (`color="triumph"` active) |
-| 라운드 칩 | `group_title` 있으면 DB 제목, 없으면 `round_of` / `finals` |
-| 이벤트 생성 | `format=1` 시 info alert, 인원 4~128, 3/4위 OFF |
+| 구역 탭 · 뷰포트 | **PC:** `v-btn`만 (`triumph` active). **모바일:** `v-slide-group` + `depth-chip` (PC에 slide-group 중복 금지) |
+| 라운드 칩 | `group_title` 있으면 DB 제목, 없으면 `round_of` / `finals` (GF 구역은 `finals`) |
+| 이벤트 생성 | `format=1` 시 info alert (`format_de_hint`), 인원 4~128, 3/4위 OFF |
+| 이벤트 관리 | 생성과 동일 hint·인원 제약·`match34` 비활성 (Manage Overview) — **FE 미적용 시 갭** |
+| 매치 보조 라벨 | i18n `de_loser_drop` — 패자부 진출 등 (`BracketStatusLabel` 또는 매치 헤더, BE status 연동 후) |
 | 토큰 | 기존 `triumph`, `tp-*` 유지 (신규 hex 최소) |
+
+**선구현 검토 (5479464):** P1 `BracketContainer`·생성 hint·i18n `de_zone_*` — 채택 방향. Manage·`MakeBracketDialog`·`BracketStatusLabel`·PC 탭 중복은 FE 후속.
 
 상세: [handoffs/E3-double-elimination.md](./handoffs/E3-double-elimination.md)
 
@@ -165,3 +170,4 @@
 |------|--------|------|------|
 | 2026-05-20 | 기획/아키텍처 | 착수 승인 | E2 Handoff |
 | 2026-05-20 | UI/UX | **검토 요청** | P0·쇼케이스·문서 완료 |
+| 2026-05-21 | UI/UX | **E3 검토** | 5479464: P1 브라켓·생성 hint 채택 방향, §7 갭 보강 |
